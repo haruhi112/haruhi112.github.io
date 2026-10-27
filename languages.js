@@ -23,7 +23,9 @@ const dictionary={
 '2026 · 已录用':'2026 · ACCEPTED','2024 · 已发表':'2024 · PUBLISHED','2023 · 已发表':'2023 · PUBLISHED',
 '英国族裔教育分层的心理驱动因素与数字干预策略':'Psychological drivers of ethnic educational stratification in the UK and digital intervention strategies',
 '教育心理学视角下儿童过度沉迷短视频与直播的探讨 ↗':'An Exploration of Children’s Excessive Addiction to Short Video and Live Broadcast from an Educational Psychology Perspective ↗',
+'教育心理学视角下儿童过度沉迷短视频与直播的探讨':'An Exploration of Children’s Excessive Addiction to Short Video and Live Broadcast from an Educational Psychology Perspective',
 '高维时空数据的可视化分析 ↗':'Visual Analysis of High-Dimensional Spatiotemporal Data ↗',
+'高维时空数据的可视化分析':'Visual Analysis of High-Dimensional Spatiotemporal Data',
 'ALONG THE WAY / 学习与实践':'ALONG THE WAY','跨越学科，':'Across disciplines.','保持好奇。':'Always curious.',
 '进行中':'ONGOING','中国科学院心理研究所':'Institute of Psychology, Chinese Academy of Sciences',
 '谢菲尔德大学':'University of Sheffield','心理学与教育学硕士（转换课程）':'MSc Psychology and Education (Conversion)',
@@ -56,9 +58,9 @@ document.documentElement.lang=english?'en':'zh-CN';
 button.textContent=english?'中文':'EN';
 button.setAttribute('aria-label',english?'切换为中文':'Switch to English');
 document.title=english?'Xiwen Wan — Learning, minds & digital life':'Xiwen Wan — 学习、心理与数字生活';
-try{localStorage.setItem('xiwen-language',language);}catch{}
+try{sessionStorage.setItem('xiwen-language-v2',language);}catch{}
 }
 button.addEventListener('click',()=>setLanguage(document.documentElement.lang==='en'?'zh-CN':'en'));
-let language='zh-CN';try{language=localStorage.getItem('xiwen-language')||language;}catch{}
+let language='en';try{language=sessionStorage.getItem('xiwen-language-v2')||language;}catch{}
 setLanguage(language);
 })();

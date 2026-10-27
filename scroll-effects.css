@@ -1,0 +1,8 @@
+.sculpture-stage{transform:translate3d(0,var(--lift,0px),0)}
+.sculpture-object{transform:rotateX(var(--rx,-12deg)) rotateY(var(--ry,-18deg)) rotateZ(var(--rz,0deg))}
+.book-object{transform:rotateX(calc(var(--rx,-12deg) + 5deg)) rotateY(calc(var(--ry,-18deg) - 12deg)) rotateZ(var(--rz,-5deg))}
+.data-plane{transform:translate3d(calc(var(--layer)*var(--spread,12px)),calc(var(--layer)*var(--spread,12px)*-.65),calc(var(--layer)*var(--layer-depth,42px)))}
+.orb-orbit{transform:rotateX(73deg) rotateY(-15deg) rotateZ(var(--orbit-turn,0deg))}
+.orb-core{transform:translateZ(12px) scale(var(--core-scale,1))}
+.paper-stack{transform:rotateX(28deg) rotateY(-12deg) rotateZ(var(--paper-turn,-13deg))}
+@media(prefers-reduced-motion:reduce){.sculpture-stage{transform:none}.sculpture-object{transform:rotateX(-12deg) rotateY(-18deg)}.book-object{transform:rotateX(-7deg) rotateY(-30deg) rotateZ(-5deg)}}

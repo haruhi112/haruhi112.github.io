@@ -1,5 +1,6 @@
 (() => {
 const dictionary={
+'详细了解这项研究 ↗':'Explore this research ↗',
 '研究':'Research','继续探索 ↗':'Explore ↗',
 '理解人。':'Understanding people.','也理解人与数字世界的关系。':'And their digital worlds.',
 '从教育心理学到人格测评，':'From educational psychology to personality assessment,',

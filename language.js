@@ -77,21 +77,14 @@ Object.assign(translations, {
   'View results summary (PDF) ↗':'查看成绩汇总（PDF）↗',
   'This university-generated results summary is not an official transcript. Results are subject to faculty approval. Date of birth and registration number are redacted in this public copy.':'本成绩汇总由大学系统生成，并非正式成绩单；成绩须经院系审批。公开版本已遮去出生日期和学号。'
 });
-const resultsSection = document.createElement('section');
-resultsSection.className = 'section experience';
-resultsSection.id = 'results';
-resultsSection.innerHTML = `<div class="section-title"><span class="eyebrow">Academic results</span><h2>MSc results summary</h2></div><div class="timeline"><p>University of Sheffield · Issued 24 October 2026</p><p><strong>Credit-weighted average: 69.83 / 100 (self-calculated; 180 credits).</strong></p><div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;text-align:left;font-size:14px"><thead><tr><th style="padding:14px 8px">Module</th><th style="padding:14px 8px;white-space:nowrap">Mark / 100</th><th style="padding:14px 8px">Credits</th></tr></thead><tbody>${[
-  ['Introduction to Psychology and Development Across the Lifespan',65,30],
-  ['Research Methods in Psychology and Education',72,30],
-  ['Dissertation',72,60],
-  ['Social and Health Psychology',67,30],
-  ['Cognition and Neuroscience',71,30]
-].map(([module, mark, credits]) => `<tr style="border-top:1px solid var(--line)"><td style="padding:16px 8px">${module}</td><td style="padding:16px 8px">${mark}</td><td style="padding:16px 8px">${credits}</td></tr>`).join('')}</tbody></table></div><a class="button" href="results-summary.pdf" target="_blank" rel="noopener noreferrer">View results summary (PDF) ↗</a><p style="font-size:12px;color:var(--muted)">This university-generated results summary is not an official transcript. Results are subject to faculty approval. Date of birth and registration number are redacted in this public copy.</p></div>`;
-document.querySelector('#experience').before(resultsSection);
-const resultsNavigation = document.createElement('a');
-resultsNavigation.href = '#results';
-resultsNavigation.textContent = 'Academic results';
-document.querySelector('.navlinks').insertBefore(resultsNavigation, document.querySelector('.navlinks a[href="#experience"]'));
+const sheffieldExperience = Array.from(document.querySelectorAll('.timeline .entry')).find(entry => entry.querySelector('h3')?.textContent === 'University of Sheffield');
+const resultsLink = document.createElement('a');
+resultsLink.href = 'results-summary.pdf';
+resultsLink.target = '_blank';
+resultsLink.rel = 'noopener noreferrer';
+resultsLink.textContent = 'View results summary (PDF) ↗';
+resultsLink.style.fontSize = '13px';
+sheffieldExperience.querySelector('div').append(resultsLink);
 const publications = document.querySelectorAll('.publication');
 const paperLinks = [
   'mailto:wanxiwen25@163.com?subject=Request%20for%20ITEI%202026%20paper',

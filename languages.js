@@ -1,5 +1,9 @@
 (() => {
 const dictionary={
+'北京心海导航教育科技有限公司 ↗':'Beijing Xinhai Navigation Education Technology Co., Ltd. ↗',
+'学习统计学、Python 数据处理与可视化，以及数据库设计与查询，建立定量分析和数据整理基础。本科毕业论文聚焦万达电影的财务报表分析。':'Studied statistics, data processing and visualisation with Python, and database design and querying, building foundations in quantitative analysis and data organisation. My undergraduate dissertation examined Wanda Film’s financial statements.',
+'协助学校心理测评项目，核对参与者信息、整理测评数据，并在督导下进行结果的初步分类。参与测评档案、项目材料及学生心理服务日常事务的整理。':'Assisted with school-based psychological assessment projects, checking participant information, organising assessment data and supporting preliminary categorisation of results under supervision. Helped maintain assessment records, project materials and routine student mental health service administration.',
+'协调心理咨询预约与初访接待，通过初步沟通了解学生的支持需求，协助安排后续咨询。支持从预约到初访的衔接及心理服务的日常协调。':'Coordinated counselling appointments and intake reception, holding initial conversations to understand students’ support needs and facilitate subsequent counselling arrangements. Supported the appointment-to-intake pathway and routine coordination of student psychological services.',
 '详细了解这项研究 ↗':'Explore this research ↗',
 '研究':'Research','继续探索 ↗':'Explore ↗',
 '理解人。':'Understanding people.','也理解人与数字世界的关系。':'And their digital worlds.',
